@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>labWork1</title>
+</head>
+<body>
+
+<div id="header"></div>
+<div id="container"></div>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+    const userStyle = {
+        border: '1px solid #ccc',
+        padding: '10px',
+        margin: '10px 0',
+        borderRadius: '8px',
+        backgroundColor: '#f9f9f9'
+    };
+
+    const cityStyle = {
+        border: '1px solid #ccc',
+        padding: '10px',
+        margin: '10px 0',
+        borderRadius: '8px',
+        backgroundColor: '#f9f9f9'
+    };
+
+    const imageStyle = {
+        width: '100%',
+        maxWidth: '300px',
+        maxHeight: '180px',
+        borderRadius: '8px',
+        margin: '10px 10px'
+    };
+
+    const appStyle = {
+        fontFamily: 'Arial, sans-serif',
+        color: '#333',
+        padding: '20px',
+        maxWidth: '800px',
+        margin: '0 auto'
+    };
+
+    const UserInfo = () => (
+        <div style={userStyle}>
+            <h1>LabWork1</h1>
+            <h2>Информация о пользователе</h2>
+            <p>ФИО: Иванов Иван Иванович</p>
+            <p>Контактный телефон: +380123456789</p>
+            <p>Электронный адрес: ivanov@gmail.com</p>
+        </div>
+    );
+
+    const CityInfo = () => (
+        <div style={cityStyle}>
+            <h2>Информация о городе</h2>
+            <p>Название города: Одесса</p>
+            <p>Название страны: Украина</p>
+            <p>Год основания: 1794</p>
+            <div>
+                <h3>Достопримечательности:</h3>
+                <img src="img/Odessa_Opera_and_Ballet_Theater.jpg" alt="Оперный театр" style={imageStyle}/>
+                <img src="img/Воронцовский_маяк.jpg" alt="Воронцовский маяк" style={imageStyle}/>
+            </div>
+        </div>
+    );
+
+    const App = () => (
+        <div style={appStyle}>
+            <UserInfo/>
+            <CityInfo/>
+        </div>
+    );
+
+    ReactDOM.createRoot(document.getElementById('container')).render(<App/>);
+
+</script>
+</body>
+</html>
